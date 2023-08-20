@@ -1,0 +1,73 @@
+
+
+
+html,
+body {
+  background-color: #000000;
+  font-family: Consolas, sans-serif;
+}
+.dropdown-menu,
+.card {
+  border-radius: 10px;
+  background-color: #000000;
+}
+.nav-link,
+a:visited,
+a:hover,
+a:link {
+  color: #00b4ff;
+  text-decoration: none;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+.call {
+  font-size: 30px;
+}
+.nav {
+  font-size: 40px;
+}
+.cute,
+li,
+.code,
+p {
+  font-size: 30px;
+  color: #ffffff;
+}
+.d {
+  font-size: 14px;
+}
+.dotted {
+  border-style: dotted;
+}
+.dashed {
+  border-style: dashed;
+}
+img {
+  /*display: block;*/
+  /*max-width: 100%;*/
+  width: 100%;
+  height: 100%;
+  opacity: 85%;
+ /*background-size: cover;*/
+  aspect-ratio: 10/10;
+  object-fit: cover;
+  /*transform: scale(-1, 1);*/
+}
+.description {
+  color:white;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #5ba6bb;
+}
+
+h4{
+  font-size: 15px;
+}

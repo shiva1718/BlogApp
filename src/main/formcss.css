@@ -1,0 +1,30 @@
+/* custom-bootstrap.css */
+.border-primary {
+    border-color: #007bff !important;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.form-label {
+    color: white;
+}
+@keyframes glowing {
+    0% {
+        border-color: #ccc;
+        box-shadow: none;
+    }
+    50% {
+        border-color: #007bff;
+        box-shadow: 0 0 10px #007bff;
+    }
+    100% {
+        border-color: #ccc;
+        box-shadow: none;
+    }
+}
+
+.glowing-border {
+    animation: glowing 2s infinite;
+}
