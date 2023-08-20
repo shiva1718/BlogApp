@@ -27,7 +27,7 @@ async function addBlog(blog) {
     try {
         // Connect the client to the server	(optional starting in v4.7)
         await client.connect();
-        await client.db("BlogDB").collection("blogs").insertOne(blog);
+        await client.db("BlogDB").collection("posts").insertOne(blog);
         console.log("Successfully added blog to database");
         return true;
     } catch (e) {
