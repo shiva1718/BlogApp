@@ -1,7 +1,6 @@
 import React from 'react';
 import Data from './Data';
 import {Link, Route, Routes} from 'react-router-dom';
-import MDeditor from "./MDeditor";
 import EditPage from "./EditPage";
 const Nav = () => (
   <>
