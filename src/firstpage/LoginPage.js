@@ -3,7 +3,21 @@ import React from 'react';
 import './Login.css';
 import {useState} from "react";
 
-function Form({ option }) {
+function Form({ option, handleSubmit}){
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [repeatPassword, setRepeatPassword] = useState('');
+
+    const handleFormSubmit = (evt) => {
+        evt.preventDefault();
+
+        if (option === 1) {
+            handleSubmit({ email, password });
+        } else if (option === 2 && password === repeatPassword) {
+            handleSubmit({ email, password });
+        }
+    };
 
     return (
         <form method="POST" action={"/" + (option === 1 ? "sign-in" : "sign-up")} className="account-form" onSubmit={(evt) => evt.preventDefault()}>
@@ -46,6 +60,24 @@ function Form({ option }) {
 function LoginPage() {
     const [option, setOption] = useState(1);
 
+    const handleSubmit = async ({ email, password }) => {
+        try {
+            const response = await fetch('`/Login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            // Handle the response data here
+        } catch (error) {
+            console.error('An error occurred:', error);
+        }
+    };
+
+
     return (
         <div className="container">
             <header>
@@ -67,7 +99,7 @@ function LoginPage() {
                     Sign up
                 </li>
             </ul>
-            <Form option={option} />
+            <Form option={option} handleSubmit={handleSubmit} />
 
         </div>
     );
